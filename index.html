@@ -31,9 +31,32 @@
      💬 Buy on Discord
   </a>
 
+  <!-- ADMIN BUTTON (HIDDEN BY DEFAULT) -->
+  <div id="adminPanel" style="display:none; margin-top:40px;">
+    <a href="admin.html"
+       style="
+         display:inline-block;
+         padding:12px 25px;
+         background:#ff4d4d;
+         color:white;
+         text-decoration:none;
+         border-radius:6px;
+         font-weight:bold;
+       ">
+       🔒 Admin Panel
+    </a>
+  </div>
+
   <p style="margin-top:40px; color:#aaa;">
     Orders are handled via Discord
   </p>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("admin") === "zenix") {
+    document.getElementById("adminPanel").style.display = "block";
+  }
+</script>
 
 </body>
 </html>
