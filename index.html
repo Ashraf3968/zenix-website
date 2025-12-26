@@ -1,62 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Zenix Mart</title>
+  <meta charset="UTF-8" />
+  <title>Zenix Mart | Digital Services Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --card: #16162a;
+      --primary: #8b5cf6;
+      --text: #ffffff;
+      --muted: #b9b9d3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 25px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #23234a;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: var(--primary);
+    }
+
+    header span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .hero a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .hero a:hover {
+      opacity: 0.85;
+    }
+
+    .section {
+      padding: 50px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 14px;
+      text-align: center;
+      border: 1px solid #23234a;
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      border-top: 1px solid #23234a;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .admin-link {
+      opacity: 0.15;
+      font-size: 11px;
+      display: block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: var(--muted);
+    }
+  </style>
 </head>
 
-<body style="background:#0f0f1a; color:white; font-family:Arial; text-align:center; padding:50px;">
+<body>
 
-  <h1>💜 Zenix Mart</h1>
-  <p>Discord Services Store</p>
+  <!-- HEADER -->
+  <header>
+    <h1>💜 Zenix Mart</h1>
+    <span>Trusted Digital Services</span>
+  </header>
 
-  <hr style="width:200px; margin:30px auto;">
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Premium Digital Services</h2>
+    <p>
+      Buy Discord Nitro, Server Boosts, MCFA and other verified digital services
+      with fast delivery and trusted support.
+    </p>
 
-  <h2>What We Sell</h2>
-  <p>• Discord Nitro</p>
-  <p>• Discord Server Boosts</p>
-  <p>• MCFA</p>
-  <p>• Other Digital Services</p>
-
-  <a href="https://discord.gg/tymhkkEcJy" target="_blank"
-     style="
-       display:inline-block;
-       margin-top:30px;
-       padding:15px 30px;
-       background:#5865F2;
-       color:white;
-       text-decoration:none;
-       border-radius:8px;
-       font-weight:bold;
-     ">
-     💬 Buy on Discord
-  </a>
-
-  <!-- ADMIN BUTTON (HIDDEN BY DEFAULT) -->
-  <div id="adminPanel" style="display:none; margin-top:40px;">
-    <a href="admin.html"
-       style="
-         display:inline-block;
-         padding:12px 25px;
-         background:#ff4d4d;
-         color:white;
-         text-decoration:none;
-         border-radius:6px;
-         font-weight:bold;
-       ">
-       🔒 Admin Panel
+    <a href="https://discord.gg/tymhkkEcJy" target="_blank">
+      🚀 Buy on Discord
     </a>
-  </div>
+  </section>
 
-  <p style="margin-top:40px; color:#aaa;">
-    Orders are handled via Discord
-  </p>
+  <!-- PRODUCTS -->
+  <section class="section">
+    <h3>What We Offer</h3>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("admin") === "zenix") {
-    document.getElementById("adminPanel").style.display = "block";
-  }
-</script>
+    <div class="grid">
+      <div class="card">
+        <h4>🎮 Discord Nitro</h4>
+        <p>Instant Nitro & Nitro Basic at best prices.</p>
+      </div>
+
+      <div class="card">
+        <h4>🚀 Server Boosts</h4>
+        <p>Boost your Discord server with verified boosts.</p>
+      </div>
+
+      <div class="card">
+        <h4>🔐 MCFA</h4>
+        <p>Secure Minecraft Full Access accounts.</p>
+      </div>
+
+      <div class="card">
+        <h4>⚡ Other Services</h4>
+        <p>More premium digital products coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Zenix Mart • All Rights Reserved  
+    <br />
+    Fast delivery • Trusted sellers • Secure service
+
+    <!-- hidden admin entry -->
+    <a href="/auth.html" class="admin-link">admin</a>
+  </footer>
 
 </body>
 </html>
